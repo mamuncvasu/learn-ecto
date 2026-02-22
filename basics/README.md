@@ -6,6 +6,7 @@
     - Lists
     - Tuples ({:ok, value})
     - Maps (%{key: value})
+    - ecto and schema
 
 ## Use struct in schema
   
