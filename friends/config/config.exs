@@ -2,8 +2,8 @@ import Config
 
 config :friends, Friends.Repo,
   database: "friends_repo",
-  username: "mamuns",
-  password: "321",
+  username: "cvasu",
+  password: "123",
   hostname: "localhost"
 
 config :friends, ecto_repos: [Friends.Repo]

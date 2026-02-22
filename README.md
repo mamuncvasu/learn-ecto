@@ -43,7 +43,7 @@
 
 
 ## Pattren Matching (=) and pin operator(^)
-    elixir এ = মানে শুধু assign না , ২পাশের ডাটা এবং ডাটা টাইপ match করে।  যেমন : x =2  ও 2=x প্যাটার্ন match করে কিন্তু 1=x তে error খায় , আবার x = 1 দিলে আগের ডাটার জায়গায় rebind হয়। যদি আগের ডাটা replace না করে pattern matching করতে চাই তবে pin operator ব্যবহার করতে হয়।  যেমনঃ x = 1 দিলে আগের value কে রিপ্লেস করে , কিন্তু ^x = 1 হলে আগের data র সাথে match হচ্ছে কিন শুধু সেটা দেখে
+    elixir এ = মানে শুধু assign না , ২ পাশের ডাটা এবং ডাটা টাইপ match করে।  যেমন : x =2  ও 2=x প্যাটার্ন match করে   কিন্তু 1=x তে error খায় , আবার x = 1 দিলে আগের ডাটার জায়গায় rebind হয়। যদি   আগের ডাটা replace না করে pattern matching করতে চাই তবে pin operator ব্যবহার করতে হয়।  যেমনঃ x = 1  দিলে আগের value কে রিপ্লেস করে , কিন্তু ^x = 1 হলে আগের data র সাথে match হচ্ছে কিন শুধু সেটা দেখে
 
 ## Pipe Operator [ 1st fun |> 2nd fun |> .... rightmost will execute last] 
 
@@ -329,7 +329,7 @@
     
 ## Struct with Module [structure diye constractor]
 
-    module এর মধ্যে struct রাখা হলে ওকে দিয়ে module কে কল করতে সময় default  data সেট করা যায়। struct ছাড়া call করতে হলে [ modulename .functionname ] এই format এ call দিতে হয় , struct সহ call করতে সময় % দিয়ে শুরু করতে হয়। 
+    module এর মধ্যে struct রাখা হলে ওকে দিয়ে module কে কল করতে সময় default  data সেট করা যায়। struct  ছাড়া call করতে হলে [ modulename .functionname ] এই format এ call দিতে হয় , struct সহ call করতে সময় % দিয়ে শুরু করতে হয়। 
 
     defmodule Example.User do
       defstruct name: "Sean", roles: []
@@ -366,7 +366,7 @@
 
 ## Import Module and Filter [Both functions & Macros]
 
-    By default সব  functions এবং  macros কে  import করে , শুধু function গুলোকে import করতে চাইলে [import List, only: :functions], শুধু macros গুলোকে import করতে চাইলে [import List, only: :macros], শুধু specific ১টা function import করতে চাইলে (import List, only: [last: 1] ), কিন্তু ১টা function ছাড়া বাকি সবগুলো function কে import করতে (import List, except: [last: 1]) এভাবে লিখতে হয়। 
+    By default সব  functions এবং  macros কে  import করে , শুধু function গুলোকে import করতে চাইলে [import List, only: :functions], শুধু macros গুলোকে import করতে চাইলে [import List, only: :macros],   শুধু specific ১টা function import করতে চাইলে (import List, only: [last: 1] ), কিন্তু ১টা function      ছাড়া বাকি সবগুলো function কে import করতে (import List, except: [last: 1]) এভাবে লিখতে হয়। 
 
         import List
         import List, only: [last: 1]
