@@ -12,8 +12,11 @@
 ## Create first LiveView without event-handle
 
    |> edit : lib/pento_web/router.ex
+   
           live "/guess", WrongLive
+          
    |> create and edit : lib/pento_web/live/wrong_live.ex
+   
           defmodule PentoWeb.WrongLive do
             use PentoWeb, :live_view
           
